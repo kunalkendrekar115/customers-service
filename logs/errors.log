@@ -1,0 +1,20 @@
+undefined
+ Jul-28-2021 17:51:09: Path: /users/login, Error: User does not exists
+ Jul-28-2021 17:54:18: Path: /users/login, Error: User does not exists
+ Jul-28-2021 17:54:18: undefined
+ Jul-28-2021 17:54:47: Path: /users/login, Error: User does not exists
+ Jul-28-2021 17:54:47: undefined
+ Jul-28-2021 17:55:09: Path: /users/login, ReferenceError: comparPassword is not defined
+ Jul-28-2021 17:55:09: undefined
+ Jul-28-2021 17:55:37: Path: /users/login, ReferenceError: comparPassword is not defined
+ Jul-28-2021 17:55:37: comparPassword is not defined
+ Jul-28-2021 17:59:35: Path: /users/login, Error: User does not exists
+ Jul-28-2021 18:00:27: Path: /users/login, Error: User does not exists
+ Jul-28-2021 18:01:49: Path: /users/login, TypeError: Cannot read property 'password' of null
+ Jul-28-2021 18:04:06: Path: /users/login, ReferenceError: comparePssword is not defined
+ Jul-28-2021 18:07:41: Path: /users/login, Error: [object Object]
+ Jul-28-2021 18:08:41: Path: /users/login, Error: [object Object]
+ Jul-28-2021 18:14:04: Path: /users/login, ReferenceError: CustomError is not defined
+ Jul-28-2021 18:14:33: Path: /users/login, ReferenceError: foo is not defined
+ Jul-28-2021 19:02:14: Path: /users/profile, ReferenceError: error is not defined
+ Jul-28-2021 19:02:28: Path: /users/profile, JsonWebTokenError: invalid token
