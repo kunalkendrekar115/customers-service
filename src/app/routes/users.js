@@ -1,5 +1,5 @@
 const express = require("express");
-const { verifyToken } = require("../auth");
+const { verifyToken } = require("restaurants-utils");
 
 const { signupController, loginController, profileController } = require("../controllers");
 const { validateUserData, isValidUserData } = require("./helpers");

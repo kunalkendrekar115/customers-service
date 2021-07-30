@@ -1,7 +1,11 @@
 const { UsersModal } = require("../../db");
-const CustomError = require("../../utils/custom-error");
 
-const { encryptPassword, generateToken, comparePassword } = require("../auth");
+const {
+  encryptPassword,
+  generateToken,
+  comparePassword,
+  CustomError
+} = require("restaurants-utils");
 
 const signupController = async (req, res, next) => {
   try {
@@ -19,7 +23,7 @@ const signupController = async (req, res, next) => {
     user = await record.save();
 
     const { _id } = user;
-    const accessToken = generateToken(_id, email);
+    const accessToken = generateToken(_id, email, user.name);
 
     res.status(200).json({ id: _id, accessToken });
   } catch (error) {
@@ -44,8 +48,8 @@ const loginController = async (req, res, next) => {
       return;
     }
 
-    const { _id } = user;
-    const accessToken = generateToken(_id, email);
+    const { _id, name } = user;
+    const accessToken = generateToken(_id, email, name);
 
     res.status(200).json({ id: _id, accessToken });
   } catch (error) {

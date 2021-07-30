@@ -2,8 +2,7 @@ const db = require("./db");
 const express = require("express");
 
 const { usersRoutes } = require("./app/routes");
-const errorHandler = require("./utils/error-handler");
-const logger = require("./utils/logger");
+const { logger, errorHandler } = require("restaurants-utils");
 
 db.connectToDatabase();
 
