@@ -45,7 +45,6 @@ const loginController = async (req, res, next) => {
 
     if (!verifyUser) {
       throw new CustomError(403, "Invalid Credentials");
-      return;
     }
 
     const { _id, name } = user;
@@ -59,7 +58,7 @@ const loginController = async (req, res, next) => {
 
 const profileController = async (req, res, next) => {
   try {
-    const user = await UsersModal.findOne({ _id: req.userId }, { password: 0 });
+    const user = await UsersModal.findOne({ _id: req.body.userId }, { password: 0 });
 
     res.status(200).json(user);
   } catch (error) {
