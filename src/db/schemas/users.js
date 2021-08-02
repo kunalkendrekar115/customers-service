@@ -7,7 +7,6 @@ const usersSchema = new Schema({
   address: String,
   city: String,
   email: String,
-  accessToken: String,
   password: String,
   mobileNumber: Number
 });

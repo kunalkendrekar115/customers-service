@@ -1,0 +1,87 @@
+openapi: 3.0.0
+info:
+  title: Customers API
+
+tags:
+  - name: Customers
+    description: Restaurants User management service
+servers:
+  - url: http://localhost:3000/users
+paths:
+  /signup:
+    post:
+      tags:
+        - Customers
+      summary: Add new User.
+      requestBody:
+        description: Users json
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/definations/User"
+      responses:
+        "200":
+          description: Successful operation
+        "500":
+          description: DB error
+  /login:
+    post:
+      tags:
+        - Customers
+      requestBody:
+        description: login User
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                email:
+                  type: string
+                password:
+                  type: string
+      responses:
+        "200":
+          description: Successful operation
+        "403":
+          description: Invalid Credentials
+        "500":
+          description: DB error
+
+  /profile:
+    get:
+      tags:
+        - Customers
+      parameters:
+        - name: access-token
+          in: header
+          description: Access Token
+          required: true
+          schema:
+            type: string
+
+      responses:
+        "200":
+          description: Successful operation
+        "401":
+          description: Invalid Token
+        "500":
+          description: DB error
+
+definations:
+  User:
+    type: object
+    properties:
+      name:
+        type: string
+      address:
+        type: string
+      city:
+        type: string
+      email:
+        type: string
+      password:
+        type: string
+      mobileNumber:
+        type: string

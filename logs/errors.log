@@ -21,3 +21,4 @@ undefined
  Jul-29-2021 14:03:35: Path: /users/profile, JsonWebTokenError: invalid token
  Jul-30-2021 14:56:40: Path: /users/profile, TokenExpiredError: jwt expired
  Jul-31-2021 20:10:13: Path: /users/profile, TokenExpiredError: jwt expired
+ Aug-01-2021 12:07:32: Path: /users/profile, JsonWebTokenError: jwt malformed
